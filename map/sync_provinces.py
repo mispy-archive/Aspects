@@ -35,7 +35,6 @@ def_colors = {
     (255, 255, 255): True
 }
 
-# Accumulate definition lines to override the originals
 output_defs = []
 
 # Toggle existing province defs that have been removed/readded
