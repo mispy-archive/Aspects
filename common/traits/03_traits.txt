@@ -3,9 +3,13 @@
 ########################################################################################################
 
 god_of_law = {
-  general_opinion = 50
-  vassal_opinion = 75
+  vassal_opinion = 100
   church_opinion = 100
+
+  opposite_opinion = -30
+  opposites = {
+    trait = heir_of_law
+  }
 
   customizer = no
   random = no
@@ -13,11 +17,11 @@ god_of_law = {
 }
 
 heir_of_law = {
-  general_opinion = 10
-  church_opinion = 30
+  vassal_opinion = 10
+  church_opinion = 20
+
   same_opinion = -15
   opposite_opinion = -30
-
   opposites = {
     trait = god_of_law
   }
@@ -25,4 +29,39 @@ heir_of_law = {
   potential = {
     culture = tokharika
   }
+
+  inherit_chance = 50
+}
+
+god_of_secrets = {
+  intrigue = 100
+
+  opposite_opinion = -30
+  opposites = {
+    trait = god_of_secrets
+  }
+}
+
+heir_of_secrets = {
+  intrigue = 5
+
+  same_opinion = -15
+  opposite_opinion = -30
+  opposites = {
+    trait = god_of_secrets
+  }
+
+  potential = {
+    culture = chaldic
+  }
+
+  inherit_chance = 50
+}
+
+artifice = {
+  martial = 5
+  health = 5
+  immortal = yes
+  fertility = -1
+  general_opinion = -20
 }

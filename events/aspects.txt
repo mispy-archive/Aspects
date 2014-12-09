@@ -23,3 +23,27 @@ character_event = {
     }
   }
 }
+
+character_event = {
+  id = aspects.inherit_secrets
+  desc = aspects.inherit_secrets.desc
+  picture = GFX_evt_bishop
+
+  trigger = {
+    trait = heir_of_secrets
+    NOT = {
+      god_of_secrets {
+        is_alive = yes
+      }
+    }
+  }
+
+  option = {
+    name = OK
+    remove_trait = heir_of_secrets
+    add_trait = god_of_secrets
+    k_chald {
+      add_claim = ROOT
+    }
+  }
+}

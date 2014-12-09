@@ -24,8 +24,6 @@ aspects_group = {
 		icon = 20
 		heresy_icon = 21
 
-		ai_convert_other_group = 2 # always try to convert
-
 		color = { 0.6 0.6 0.6 }
 		god_names = {
 			GOD_THOR GOD_THE_THUNDERER GOD_THE_ALLFATHER GOD_THE_ODIN GOD_FREY GOD_TYR
@@ -34,33 +32,18 @@ aspects_group = {
 			LOKI HEL FENRIR JORMUNGANDR
 		}
 
-		unit_modifier = {
-			levy_size = 0.3
-
-			key = "OFF_RELIGION"
-		}
-
 		crusade_name = GREAT_HOLY_WAR
 		scripture_name = THE_SAGAS
 		priest_title = FLAMETENDER
-		priests_can_marry = yes
 
 		can_call_crusade = yes
-
-		allow_looting = yes
-		allow_rivermovement = yes
 		female_temple_holders = yes
-
-		short_reign_opinion_year_mult = 3 # The default is 2
-
-		aggression = 1.5 # AI aggression factor
+    feminist = yes
 
 		religious_clothing_head = 3
 		religious_clothing_priest = 3
 
 		intermarry = aspects_group
-
-		allow_in_ruler_designer = no
 	}
 
 	tokharika = {
@@ -70,7 +53,34 @@ aspects_group = {
 		icon = 20
 		heresy_icon = 21
 
-		ai_convert_other_group = 2 # always try to convert
+		color = { 0.6 0.6 0.6 }
+		god_names = {
+			GOD_THOR GOD_THE_THUNDERER GOD_THE_ALLFATHER GOD_THE_ODIN GOD_FREY GOD_TYR
+		}
+		evil_god_names = {
+			LOKI HEL FENRIR JORMUNGANDR
+		}
+
+		crusade_name = GREAT_HOLY_WAR
+		scripture_name = THE_SAGAS
+		priest_title = FLAMETENDER
+
+		can_call_crusade = yes
+		female_temple_holders = yes
+    feminist = yes
+
+		religious_clothing_head = 3
+		religious_clothing_priest = 3
+
+		intermarry = aspects_group
+	}
+
+  chaldic = {
+		graphical_culture = norsegfx
+		secondary_event_pictures = norse_pagan
+
+		icon = 20
+		heresy_icon = 21
 
 		color = { 0.6 0.6 0.6 }
 		god_names = {
@@ -80,33 +90,28 @@ aspects_group = {
 			LOKI HEL FENRIR JORMUNGANDR
 		}
 
-		unit_modifier = {
-			levy_size = 0.3
-
-			key = "OFF_RELIGION"
-		}
-
 		crusade_name = GREAT_HOLY_WAR
 		scripture_name = THE_SAGAS
 		priest_title = FLAMETENDER
-		priests_can_marry = yes
 
 		can_call_crusade = yes
-
-		allow_looting = yes
-		allow_rivermovement = yes
 		female_temple_holders = yes
-
-		short_reign_opinion_year_mult = 3 # The default is 2
-
-		aggression = 1.5 # AI aggression factor
+    feminist = yes
 
 		religious_clothing_head = 3
 		religious_clothing_priest = 3
 
 		intermarry = aspects_group
+	}
 
-		allow_in_ruler_designer = no
+	providence = {
+		graphical_culture = westerngfx
+
+		icon = 20
+		heresy_icon = 21
+
+		color = { 0.5 0.5 0.9 }
+		parent = chaldic
 	}
 }
 

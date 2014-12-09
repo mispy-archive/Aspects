@@ -1,0 +1,12 @@
+# 4 - Idenmuthir
+
+# County Title
+title = c_idenmuthir
+
+# Settlements
+max_settlements = 5
+b_idenmuthir = castle
+
+# Misc
+culture = tokharika
+religion = tokharika

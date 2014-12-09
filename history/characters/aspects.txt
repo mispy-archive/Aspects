@@ -3,6 +3,10 @@
 	dynasty=1
 	religion=antarami
 	culture=antarami
+  trait=duelist
+  trait=gregarious
+  trait=trusting
+  trait=stressed
 	801.1.1={
 		birth=yes
 	}
@@ -17,6 +21,9 @@
 	dynasty=1
 	religion=antarami
 	culture=antarami
+  trait=elusive_shadow
+  trait=patient
+  trait=deceitful
 	801.1.1={
 		birth=yes
 	}
@@ -33,7 +40,9 @@
 	dynasty=1
 	religion=antarami
 	culture=antarami
+  trait=gardener
   trait=diligent
+  trait=honest
 	816.1.1={
 		birth=yes
 	}
@@ -48,6 +57,7 @@
 	dynasty=1
 	religion=antarami
 	culture=antarami
+  trait=brilliant_strategist
   trait=quick
   trait=attractive
   trait=ambitious
@@ -124,6 +134,7 @@
 	culture=tokharika
   father=203
   mother=207
+  trait=heir_of_law
 	822.1.1={
 		birth=yes
 	}
@@ -136,6 +147,8 @@
 	religion=tokharika
 	culture=tokharika
   trait=heir_of_law
+  trait=proud
+  trait=wroth
 	812.1.1={
 		birth=yes
 	}
@@ -147,6 +160,10 @@
 	religion=tokharika
 	culture=tokharika
   trait=god_of_law
+  trait=scholarly_theologian
+  trait=just
+  trait=proud
+  trait=zealous
 	758.1.1={
 		birth=yes
 	}
@@ -158,6 +175,10 @@
 	dynasty=2
 	religion=tokharika
 	culture=tokharika
+  trait=cruel
+  trait=arbitrary
+  trait=wroth
+  trait=proud
 	767.1.1={
 		birth=yes
 	}
@@ -165,3 +186,52 @@
 		add_spouse=203
 	}
 }
+
+900 = {
+	name=Rashk
+	dynasty=9
+	religion=providence
+	culture=chaldic
+  #trait=god_of_sight
+  trait=elusive_shadow
+  trait=trickster
+  trait=genius
+  trait=attractive
+  trait=homosexual
+  trait=scholar
+  trait=deceitful
+  trait=arbitrary
+  trait=ambitious
+	776.1.1={
+		birth=yes
+	}
+}
+
+901 = {
+  name=Solornel
+  dynasty=9
+  father=900
+  trait=artifice
+  trait=strong
+  trait=envious
+  trait=wroth
+  796.1.1={
+    birth=yes
+    add_spouse=900
+  }
+}
+
+902 = {
+  name=Ziazan
+  dynasty=9
+  father=900
+  trait=flamboyant_schemer
+  trait=light_foot_leader
+  trait=flanker
+  trait=artifice
+  trait=gregarious
+  trait=cynical
+  trait=lustful
+  trait=envious
+}
+

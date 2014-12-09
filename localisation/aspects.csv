@@ -4,6 +4,7 @@ k_tokhar;Tokhar;Tokhar;Tokhar;Tokhar;;;;;;;;;x
 PROV1;Antaram;Antaram;Antaram;Antaram;;;;;;;;;x
 PROV2;Tokhar;Tokhar;Tokhar;Tokhar;;;;;;;;;x
 PROV3;Chald;Chald;Chald;Chald;;;;;;;;;x
+PROV4;Idenmuthir;Idenmuthir;Idenmuthir;Idenmuthir;;;;;;;;;x
 PROV454;Erelhoen;Erelhoen;Erelhoen;Erelhoen;;;;;;;;;x
 PROV714;Esperans;Esperans;Esperans;Esperans;;;;;;;;;x
 PROV315;Petragon;Petragon;Petragon;Petragon;;;;;;;;;x
@@ -27,5 +28,7 @@ god_of_law;Aspect of Law;Aspect of Law;Aspect of Law;Aspect of Law;;;;;;;;;x
 god_of_law_desc;This character is the God of Law, and commands unthinking obedience from subjects. The Aspect of Law is traditionally associated with the land of Tokhar.;placeholder;placeholder;placeholder;;;;;;;;;x
 heir_of_law;Heir of Law;Heir of Law;Heir of Law;Heir of Law;;;;;;;;;x
 heir_of_law_desc;This character is possible heir to the Aspect of Law. Gods of Law commands unthinking obedience from subjects, and are traditionally associated with the land of Tokhar.;placeholder;placeholder;placeholder;;;;;;;;;x
+artifice;Artifice;placeholder;placeholder;placeholder;;;;;;;;;x
+artifice_desc;This character is an artificial being forged from a soul of the dead. Well-made artifices are resilient and capable, but many humans find them disturbing.;placeholder;placeholder;placeholder;;;;;;;;;x
 # Events
 aspects.inherit_law.desc;The previous God of Law has fallen, and you have claimed their star. Your voice holds divine sway over all who hear it.;placeholder;placeholder;placeholder;;;;;;;;;x
