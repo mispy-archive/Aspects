@@ -1,0 +1,78 @@
+100 = {
+	name=Eodar
+	dynasty=1
+	religion=antarami
+	culture=antarami
+	801.1.1={
+		birth=yes
+	}
+	895.1.1={
+		death=yes
+	}
+}
+
+101 = {
+	name=Deloram
+  female=yes
+	dynasty=1
+	religion=antarami
+	culture=antarami
+	801.1.1={
+		birth=yes
+	}
+	895.1.1={
+		death=yes
+	}
+}
+
+102 = {
+	name=Katarosi
+  female=yes
+  father=100
+  mother=101
+	dynasty=1
+	religion=antarami
+	culture=antarami
+  trait=diligent
+	816.1.1={
+		birth=yes
+	}
+	895.1.1={
+		death=yes
+	}
+}
+
+103 = {
+	name=Houri
+  female=yes
+  father=100
+  mother=101
+  mother=102
+	dynasty=1
+	religion=antarami
+	culture=antarami
+  trait=quick
+  trait=attractive
+  trait=ambitious
+  trait=wroth
+  trait=proud
+	816.1.1={
+		birth=yes
+	}
+	895.1.1={
+		death=yes
+	}
+}
+
+200 = {
+	name=Marzban
+	dynasty=1
+	religion=antarami
+	culture=antarami
+	767.1.1={
+		birth=yes
+	}
+	895.1.1={
+		death=yes
+	}
+}

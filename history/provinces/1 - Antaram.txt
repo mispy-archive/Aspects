@@ -1,0 +1,14 @@
+# 718 - Medina
+
+# County Title
+title = c_antaram
+
+# Settlements
+max_settlements = 5
+b_antaram = castle
+
+# Misc
+culture = antarami
+religion = antarami
+
+# History
