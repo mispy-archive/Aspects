@@ -1,0 +1,25 @@
+namespace = aspects
+
+character_event = {
+  id = aspects.inherit_law
+  desc = aspects.inherit_law.desc
+  picture = GFX_evt_bishop
+
+  trigger = {
+    trait = heir_of_law
+    NOT = {
+      god_of_law {
+        is_alive = yes
+      }
+    }
+  }
+
+  option = {
+    name = OK
+    remove_trait = heir_of_law
+    add_trait = god_of_law
+    k_tokhar {
+      add_claim = ROOT
+    }
+  }
+}

@@ -1,0 +1,28 @@
+########################################################################################################
+# WARNING: IF YOU DON'T ADD NEW TRAITS LAST (IN THE LAST READ TRAIT FILE), IT WILL BREAK OLD SAVE GAMES!
+########################################################################################################
+
+god_of_law = {
+  general_opinion = 50
+  vassal_opinion = 75
+  church_opinion = 100
+
+  customizer = no
+  random = no
+  cached = yes
+}
+
+heir_of_law = {
+  general_opinion = 10
+  church_opinion = 30
+  same_opinion = -15
+  opposite_opinion = -30
+
+  opposites = {
+    trait = god_of_law
+  }
+
+  potential = {
+    culture = tokharika
+  }
+}

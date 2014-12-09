@@ -36,6 +36,9 @@ k_tokhar = {
     color={ 84 57 16 }
     color2={ 255 255 255 }
 
+    title = "LORD_GOD"
+    title_female = "LADY_GODDESS"
+
     b_tokhar = {
     }
   }

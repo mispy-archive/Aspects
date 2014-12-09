@@ -6,9 +6,9 @@
 	801.1.1={
 		birth=yes
 	}
-	895.1.1={
-		death=yes
-	}
+  826.1.1={
+    add_spouse=101
+  }
 }
 
 101 = {
@@ -20,9 +20,9 @@
 	801.1.1={
 		birth=yes
 	}
-	895.1.1={
-		death=yes
-	}
+  826.1.1={
+    add_spouse=100
+  }
 }
 
 102 = {
@@ -36,9 +36,6 @@
   trait=diligent
 	816.1.1={
 		birth=yes
-	}
-	895.1.1={
-		death=yes
 	}
 }
 
@@ -59,20 +56,112 @@
 	816.1.1={
 		birth=yes
 	}
-	895.1.1={
-		death=yes
-	}
 }
 
 200 = {
-	name=Marzban
-	dynasty=1
-	religion=antarami
-	culture=antarami
+	name=Hayr
+	dynasty=2
+	religion=tokharika
+	culture=tokharika
+  mother=202
+  father=203
+  trait=naive_appeaser
+  trait=bastard
+  trait=temperate
+  trait=diligent
+  trait=honest
+  trait=kind
+  trait=humble
+  trait=trusting
+  trait=homosexual
+	820.1.1={
+		birth=yes
+	}
+}
+
+201 = {
+	name=Vanador
+	dynasty=2
+	religion=tokharika
+	culture=tokharika
+  mother=202
+  father=203
+  trait=bastard
 	767.1.1={
 		birth=yes
 	}
-	895.1.1={
-		death=yes
+}
+
+202 = {
+	name=Yasmin
+  female=yes
+	dynasty=2
+	religion=tokharika
+	culture=tokharika
+	767.1.1={
+		birth=yes
+	}
+}
+
+203 = {
+	name=Rehan
+	dynasty=2
+	religion=tokharika
+	culture=tokharika
+	767.1.1={
+		birth=yes
+	}
+	767.1.1={
+		add_spouse=207
+	}
+
+}
+
+204 = {
+	name=Aramaz
+	dynasty=2
+	religion=tokharika
+	culture=tokharika
+  father=203
+  mother=207
+	822.1.1={
+		birth=yes
+	}
+}
+
+205 = {
+	name=Tamal
+  female=yes
+	dynasty=2
+	religion=tokharika
+	culture=tokharika
+  trait=heir_of_law
+	812.1.1={
+		birth=yes
+	}
+}
+
+206 = {
+	name=Marzban
+	dynasty=2
+	religion=tokharika
+	culture=tokharika
+  trait=god_of_law
+	758.1.1={
+		birth=yes
+	}
+}
+
+207 = {
+	name=Yerahuni
+  female=yes
+	dynasty=2
+	religion=tokharika
+	culture=tokharika
+	767.1.1={
+		birth=yes
+	}
+	767.1.1={
+		add_spouse=203
 	}
 }
