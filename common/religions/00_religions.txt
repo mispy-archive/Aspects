@@ -104,6 +104,64 @@ aspects_group = {
 		intermarry = aspects_group
 	}
 
+  esperanzo = {
+		graphical_culture = norsegfx
+		secondary_event_pictures = norse_pagan
+
+		icon = 20
+		heresy_icon = 21
+
+		color = { 0.6 0.6 0.6 }
+		god_names = {
+			GOD_THOR GOD_THE_THUNDERER GOD_THE_ALLFATHER GOD_THE_ODIN GOD_FREY GOD_TYR
+		}
+		evil_god_names = {
+			LOKI HEL FENRIR JORMUNGANDR
+		}
+
+		crusade_name = GREAT_HOLY_WAR
+		scripture_name = THE_SAGAS
+		priest_title = FLAMETENDER
+
+		can_call_crusade = yes
+		female_temple_holders = yes
+    feminist = yes
+
+		religious_clothing_head = 3
+		religious_clothing_priest = 3
+
+		intermarry = aspects_group
+	}
+
+  iron_cult = {
+		graphical_culture = norsegfx
+		secondary_event_pictures = norse_pagan
+
+		icon = 20
+		heresy_icon = 21
+
+		color = { 0.6 0.6 0.6 }
+		god_names = {
+			GOD_THOR GOD_THE_THUNDERER GOD_THE_ALLFATHER GOD_THE_ODIN GOD_FREY GOD_TYR
+		}
+		evil_god_names = {
+			LOKI HEL FENRIR JORMUNGANDR
+		}
+
+		crusade_name = GREAT_HOLY_WAR
+		scripture_name = THE_SAGAS
+		priest_title = FLAMETENDER
+
+		can_call_crusade = yes
+		female_temple_holders = yes
+    feminist = yes
+
+		religious_clothing_head = 3
+		religious_clothing_priest = 3
+
+		intermarry = aspects_group
+	}
+
 	providence = {
 		graphical_culture = westerngfx
 

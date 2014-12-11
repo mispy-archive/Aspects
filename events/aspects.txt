@@ -1,8 +1,56 @@
 namespace = aspects
 
 character_event = {
-  id = aspects.inherit_law
-  desc = aspects.inherit_law.desc
+  id = aspects.1
+  desc = aspects.1.desc
+  picture = GFX_evt_bishop
+
+  is_triggered_only = yes
+
+  trigger = {
+    trait = undying_god
+  }
+
+  immediate = {
+    move_character = ROOT
+  }
+
+  option = {
+    name = OK
+  }
+}
+
+character_event = {
+  id = aspects.2
+  desc = aspects.2.desc
+  picture = GFX_evt_bishop
+
+  trigger = {
+    trait = heir_of_flight
+    NOT = {
+      god_of_flight {
+        is_alive = yes
+      }
+
+      holds_flight = {
+        is_alive = yes
+      }
+    }
+  }
+
+  option = {
+    name = OK
+    remove_trait = heir_of_flight
+    add_trait = god_of_flight
+    k_tokhar {
+      add_claim = ROOT
+    }
+  }
+}
+
+character_event = {
+  id = aspects.3
+  desc = aspects.3.desc
   picture = GFX_evt_bishop
 
   trigger = {
@@ -25,8 +73,8 @@ character_event = {
 }
 
 character_event = {
-  id = aspects.inherit_secrets
-  desc = aspects.inherit_secrets.desc
+  id = aspects.4
+  desc = aspects.4.desc
   picture = GFX_evt_bishop
 
   trigger = {

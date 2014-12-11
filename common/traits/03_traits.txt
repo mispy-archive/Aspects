@@ -65,3 +65,8 @@ artifice = {
   fertility = -1
   general_opinion = -20
 }
+
+undying_god = {
+  health = 5
+  random = no
+}

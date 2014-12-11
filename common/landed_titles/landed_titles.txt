@@ -65,11 +65,16 @@ c_petragon = {
   }
 }
 
-c_chald = {
+k_chald = {
   color={ 42 141 43 }
   color2={ 255 255 255 }
 
-  b_chald = {
+  c_chald = {
+    color={ 42 141 43 }
+    color2={ 255 255 255 }
+
+    b_chald = {
+    }
   }
 }
 

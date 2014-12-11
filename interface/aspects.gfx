@@ -19,5 +19,19 @@ spriteTypes = {
 		noOfFrames = 1
 		norefcount = yes
 		effectFile = "gfx/FX/buttonstate.lua"
+  }
+  spriteType = {
+    name = "GFX_trait_undying_god"
+    texturefile = "gfx/traits/undying_god.tga"
+    noOfFrames = 1
+    norefcount = yes
+    effectFile = "gfx/FX/buttonstate.lua"
+	}
+  spriteType = {
+    name = "GFX_trait_god_of_iron"
+    texturefile = "gfx/traits/undying_god.tga"
+    noOfFrames = 1
+    norefcount = yes
+    effectFile = "gfx/FX/buttonstate.lua"
 	}
 }

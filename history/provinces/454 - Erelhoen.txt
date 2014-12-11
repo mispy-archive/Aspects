@@ -6,7 +6,7 @@ title = c_erelhoen
 # Settlements
 max_settlements = 4
 
-b_szombathely = tribal
+b_erelhoen = castle
 
 #b_szentgotthard = temple
 #b_vasvar = city
@@ -17,17 +17,6 @@ b_szombathely = tribal
 #b_nemetujvar = castle
 
 # Misc
-culture = croatian
-religion = slavic_pagan
+culture = tokharika
+religion = tokharika
 
-# History
-
-797.1.1 = {
-	religion = catholic
-
-	b_szombathely = castle
-	b_vasvar = city
-	b_szentgotthard = temple
-}
-
-950.1.1 = { culture = hungarian }

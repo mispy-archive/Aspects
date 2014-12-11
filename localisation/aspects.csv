@@ -30,5 +30,10 @@ heir_of_law;Heir of Law;Heir of Law;Heir of Law;Heir of Law;;;;;;;;;x
 heir_of_law_desc;This character is possible heir to the Aspect of Law. Gods of Law commands unthinking obedience from subjects, and are traditionally associated with the land of Tokhar.;placeholder;placeholder;placeholder;;;;;;;;;x
 artifice;Artifice;placeholder;placeholder;placeholder;;;;;;;;;x
 artifice_desc;This character is an artificial being forged from a soul of the dead. Well-made artifices are resilient and capable, but many humans find them disturbing.;placeholder;placeholder;placeholder;;;;;;;;;x
+undying_god;Undying God;placeholder;placeholder;placeholder;;;;;;;;;x
+undying_god_desc;This character is an artificial being forged from a soul of the dead. Well-made artifices are resilient and capable, but many humans find them disturbing.;placeholder;placeholder;placeholder;;;;;;;;;x
 # Events
-aspects.inherit_law.desc;The previous God of Law has fallen, and you have claimed their star. Your voice holds divine sway over all who hear it.;placeholder;placeholder;placeholder;;;;;;;;;x
+aspects.1.desc;Resurrection;placeholder;placeholder;placeholder;;;;;;;;;x
+aspects.2.desc;The previous God of Law has fallen, and you have claimed their star. Your voice holds divine sway over all who hear it.;placeholder;placeholder;placeholder;;;;;;;;;x
+aspects.3.desc;The previous God of Law has fallen, and you have claimed their star. Your voice holds divine sway over all who hear it.;placeholder;placeholder;placeholder;;;;;;;;;x
+aspects.4.desc;The previous God of Law has fallen, and you have claimed their star. Your voice holds divine sway over all who hear it.;placeholder;placeholder;placeholder;;;;;;;;;x

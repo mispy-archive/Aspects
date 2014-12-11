@@ -233,5 +233,28 @@
   trait=cynical
   trait=lustful
   trait=envious
+  796.1.1={
+    birth=yes
+  }
 }
 
+1000 = {
+  name=Clarion
+  dynasty=10
+  religion=iron_cult
+  culture=erelhoen
+  trait=undying_god
+  trait=god_of_iron
+  trait=elusive_shadow
+  trait=attractive
+  trait=ambitious
+  trait=lunatic
+  trait=arbitrary
+  trait=cruel
+  trait=wroth
+  trait=paranoid
+  female=yes
+  756.1.1={
+    birth=yes
+  }
+}
