@@ -187,16 +187,74 @@
 	}
 }
 
+300 = {
+  name=Vahagn
+  dynasty=3
+  religion=chaldic
+  culture=chaldic
+  trait=elusive_shadow
+  trait=god_of_secrets
+  trait=arbitrary
+  trait=patient
+  trait=cruel
+  trait=proud
+  trait=deceitful
+  trait=ambitious
+  798.1.1 = {
+    birth=yes
+  }
+  828.1.1 = {
+    add_trait=kinslayer
+  }
+}
+
+301 = {
+  name=Talassen
+  female=yes
+  dynasty=3
+  trait=flamboyant_schemer
+  trait=envious
+  trait=proud
+  trait=deceitful
+  794.1.1 = {
+    birth=yes
+  }
+  819.1.1 = {
+    add_spouse=302
+  }
+}
+
+302 = {
+  name=Solam
+  dynasty=3001
+  trait=fortune_builder
+  796.1.1 = {
+    birth=yes
+  }
+  819.1.1 = {
+    add_spouse=301
+  }
+}
+
+303 = {
+  name=Barsamin
+  dynasty=3
+  820.1.1 = {
+    birth=yes
+  }
+}
+
 900 = {
 	name=Rashk
 	dynasty=9
 	religion=providence
 	culture=chaldic
-  #trait=god_of_sight
+  trait=god_of_sight
   trait=elusive_shadow
   trait=trickster
   trait=genius
   trait=attractive
+  trait=artificer
   trait=homosexual
   trait=scholar
   trait=deceitful
@@ -258,3 +316,50 @@
     birth=yes
   }
 }
+
+1100 = {
+  name=Firenzerral
+  dynasty=11
+  religion=esperanzo
+  culture=petragon
+  trait=undying_god
+  trait=god_of_strength
+  trait=brilliant_strategist
+  trait=artificer
+  trait=attractive
+  trait=quick
+  trait=ambitious
+  trait=strong
+  trait=lunatic
+  trait=wroth
+  trait=depressed
+  756.1.1={
+    birth=yes
+  }
+}
+
+1101 = {
+  name=Evren
+  female=yes
+  dynasty=11
+  religion=esperanzo
+  culture=alk
+  trait=wroth
+  trait=artifice
+  810.1.1={
+    birth=yes
+  }
+}
+
+1102 = {
+  name=Chakori
+  female=yes
+  dynasty=11
+  religion=esperanzo
+  culture=alk
+  trait=envious
+  828.1.1={
+    birth=yes
+  }
+}
+
