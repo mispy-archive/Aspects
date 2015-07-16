@@ -4,5 +4,5 @@ bookmark =
 	desc = "BM_GITT_DESC"
 	date = 836.1.1
 
-	character = 1 # Eodar
+	character = 100 # Eodar
 }

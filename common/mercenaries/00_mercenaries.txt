@@ -3,21 +3,21 @@
 # Several titles can refer to the same type as well now.
 
 knights_templar_composition = {
-	levy_size = 6
+	levy_size = 4
 	heavy_infantry = 600
 	knights = 300
 	archers = 200
 }
 
 teutonic_order_composition = {
-	levy_size = 6
+	levy_size = 4
 	heavy_infantry = 750
 	knights = 100
 	archers = 250
 }
 
 knights_hospitaler_composition = {
-	levy_size = 6
+	levy_size = 4
 	heavy_infantry = 450
 	knights = 225
 	archers = 150
@@ -127,14 +127,14 @@ huitzilopochtli_composition = {
 }
 
 knights_santiago_composition = {
-	levy_size = 3
+	levy_size = 2
 	heavy_infantry = 400
 	knights = 100
 	light_cavalry = 200
 }
 
 knights_calatrava_composition = {
-	levy_size = 3
+	levy_size = 2
 	heavy_infantry = 200
 	light_cavalry = 300
 	knights = 100

@@ -1043,3 +1043,128 @@ RES_PUBLICA = {
 		has_character_flag = achievement_res_publica
 	}
 }
+
+
+# Great Hunter
+GREAT_HUNTER = {
+	possible = {
+		is_ironman = yes
+		NOT = { has_character_flag = achievement_great_hunter }
+	}
+	
+	happened = {
+		has_character_flag = achievement_great_hunter
+	}
+}
+
+# Casanova
+CASANOVA = {
+	possible = {
+		is_ironman = yes
+		NOT = { has_character_flag = achievement_casanova }
+	}
+	
+	happened = {
+		has_character_flag = achievement_casanova
+	}
+}
+
+# Mudslinger
+MUDSLINGER = {
+	possible = {
+		is_ironman = yes
+		NOT = { has_character_flag = achievement_mudslinger }
+	}
+	
+	happened = {
+		has_character_flag = achievement_mudslinger
+	}
+}
+
+# Family Bliss
+FAMILY_BLISS = {
+	possible = {
+		is_ironman = yes
+		NOT = { has_character_flag = achievement_mudslinger }
+	}
+	
+	happened = {
+		has_character_flag = achievement_mudslinger
+	}
+}
+
+
+# We're In Business
+WERE_IN_BUSINESS = {
+	possible = {
+		is_ironman = yes
+		NOT = { has_character_flag = achievement_were_in_business }
+	}
+	
+	happened = {
+		has_character_flag = achievement_were_in_business
+	}
+}
+
+# Bring it On
+BRING_IT_ON = {
+	possible = {
+		is_ironman = yes
+		NOT = { has_character_flag = achievement_bring_it_on }
+	}
+	
+	happened = {
+		has_character_flag = achievement_bring_it_on
+	}
+}
+
+# Wise Guy
+WISE_GUY = {
+	possible = {
+		is_ironman = yes
+		NOT = { has_character_flag = achievement_wise_guy }
+	}
+	
+	happened = {
+		has_character_flag = achievement_wise_guy
+	}
+}
+
+# Let's Play
+LETS_PLAY = {
+	possible = {
+		is_ironman = yes
+		NOT = { has_character_flag = achievement_lets_play }
+	}
+	
+	happened = {
+		has_character_flag = achievement_lets_play
+	}
+}
+
+# Stargazer
+STARGAZER = {
+	possible = {
+		is_ironman = yes
+		NOT = { has_character_flag = achievement_stargazer }
+	}
+	
+	happened = {
+		has_character_flag = achievement_stargazer
+	}
+}
+
+# By the Gods
+BY_THE_GODS = {
+	possible = {
+		is_ironman = yes
+		NOT = { trait = theologian }
+	}
+	
+	happened = {
+		trait = theologian
+	}
+}
+
+
+

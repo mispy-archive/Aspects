@@ -72,6 +72,23 @@ claim = {
 	}
 
 	on_success_title = {
+	
+		hidden_tooltip = {
+			ROOT = {
+				clr_character_flag = claimant_adventurer
+				if = {
+					limit = {
+						has_nickname = no
+						lower_tier_than = PREV
+					}
+					random = {
+						chance = 50
+						give_nickname = nick_the_usurper
+					}
+				}
+			}
+		}
+	
 		usurp_title_plus_barony_if_unlanded = { target = ROOT type = claim }
 		
 		if = {
@@ -93,12 +110,6 @@ claim = {
 		
 		FROM = {
 			prestige = -100
-		}
-		
-		hidden_tooltip = {
-			ROOT = {
-				clr_character_flag = claimant_adventurer
-			}
 		}
 	}
 
@@ -256,6 +267,7 @@ other_claim = {
 				opinion = {
 					modifier = pressed_my_claim 
 					who = PREV
+					multiplier = 2
 				}
 			}
 		}
@@ -273,6 +285,22 @@ other_claim = {
 	}
 
 	on_success_title = {
+	
+		hidden_tooltip = {
+			ROOT = {
+				if = {
+					limit = {
+						has_nickname = no
+						lower_tier_than = PREV
+					}
+					random = {
+						chance = 50
+						give_nickname = nick_the_usurper
+					}
+				}
+			}
+		}
+	
 		if = {
 			limit = {
 				controls_religion = yes
@@ -291,16 +319,6 @@ other_claim = {
 					FROMFROM = { higher_tier_than = PREV }
 				}
 				ROOT = { set_defacto_liege = FROMFROM }
-			}
-			
-			hidden_tooltip = {
-				ROOT = {
-					opinion = {
-						modifier = pressed_my_claim 
-						who = PREV
-						multiplier = 2
-					}
-				}
 			}
 		}
 		
@@ -642,7 +660,7 @@ claim_on_liege = {
 			FROM = { imprison = ROOT }
 		}
 		
-		usurp_title_plus_barony_if_unlanded_and_vassals = { target = ROOT type = claim }
+		usurp_title_plus_barony_if_unlanded_and_vassals_no_adj = { target = ROOT type = claim }
 		
 		if = {
 			limit = {
@@ -650,6 +668,21 @@ claim_on_liege = {
 				NOT = { culture = ROOT }
 			}
 			hidden_tooltip = { conquest_culture = ROOT }
+		}
+		
+		hidden_tooltip = {
+			ROOT = {
+				if = {
+					limit = {
+						has_nickname = no
+						PREV = { higher_tier_than = count }
+					}
+					random = {
+						chance = 50
+						give_nickname = nick_the_usurper
+					}
+				}
+			}
 		}
 	}
 
@@ -1222,6 +1255,21 @@ other_claim_on_liege = {
 			}
 		}
 		
+		hidden_tooltip = {
+			ROOT = {
+				if = {
+					limit = {
+						has_nickname = no
+						lower_tier_than = PREV
+					}
+					random = {
+						chance = 50
+						give_nickname = nick_the_usurper
+					}
+				}
+			}
+		}
+		
 		# If the claimant has the wrong government type, take care of that first.
 		if = {
 			limit = {
@@ -1240,7 +1288,7 @@ other_claim_on_liege = {
 			ROOT = { abdicate = yes }
 		}
 		
-		usurp_title_plus_barony_if_unlanded_and_vassals = { target = ROOT type = claim }
+		usurp_title_plus_barony_if_unlanded_and_vassals_no_adj = { target = ROOT type = claim }
 		
 		if = {
 			limit = {
@@ -2177,9 +2225,19 @@ invasion = {
 			ROOT = {
 				occupy_minors_of_occupied_settlements = FROM
 				gain_all_occupied_titles = FROM			
-				give_nickname = nick_the_conqueror
-			}
-			ROOT = {
+				
+				if = {
+					limit = {
+						has_nickname = no
+					}
+					random_list = {
+						10 = { give_nickname = nick_the_great }
+						10 = { give_nickname = nick_the_victorious }
+						10 = { give_nickname = nick_the_bold }
+						10 = { give_nickname = nick_the_conqueror }
+					}
+				}
+				
 				if = {
 					limit = {
 						has_dlc = "Legacy of Rome"
@@ -2399,7 +2457,21 @@ tribal_invasion = {
 		hidden_tooltip = {
 			ROOT = {
 				occupy_minors_of_occupied_settlements = FROM
-				gain_all_occupied_titles = FROM
+				gain_all_occupied_titles = { who = FROM type = invasion }
+				
+				if = {
+					limit = {
+						has_nickname = no
+					}
+					random_list = {
+						10 = { give_nickname = nick_the_great }
+						10 = { give_nickname = nick_the_victorious }
+						10 = { give_nickname = nick_the_conqueror }
+						10 = { give_nickname = nick_the_brave }
+						10 = { give_nickname = nick_the_dragon }
+						10 = { give_nickname = nick_the_terrible }
+					}
+				}
 			}
 		}
 	}
@@ -2413,6 +2485,7 @@ tribal_invasion = {
 						title = PREV
 						enemy = FROM
 						is_crusade = yes # Even if the title holder is not participating in the war, gain holdings occupied by all Crusade participants
+						type = invasion
 					}
 				}
 			}
@@ -2422,6 +2495,21 @@ tribal_invasion = {
 	on_fail = {
 		FROM = {
 			prestige = 100
+			
+			hidden_tooltip = {
+				if = {
+					limit = {
+						has_nickname = no
+					}
+					random_list = {
+						10 = { give_nickname = nick_the_great }
+						10 = { give_nickname = nick_the_hammer }
+						10 = { give_nickname = nick_the_avenger }
+						10 = { give_nickname = nick_the_lion }
+						10 = { give_nickname = nick_the_bold }
+					}
+				}
+			}
 		}
 		any_defender = {
 			limit = { character = FROM }
@@ -2446,8 +2534,21 @@ tribal_invasion = {
 		}
 		FROM = {
 			prestige = 200
-		}
-		FROM = {
+			hidden_tooltip = {
+				if = {
+					limit = {
+						has_nickname = no
+					}
+					random_list = {
+						10 = { give_nickname = nick_the_great }
+						10 = { give_nickname = nick_the_hammer }
+						10 = { give_nickname = nick_the_avenger }
+						10 = { give_nickname = nick_the_lion }
+						10 = { give_nickname = nick_the_bold }
+					}
+				}
+			}
+			
 			if = {
 				limit = { 
 					has_dlc = "Legacy of Rome"
@@ -2488,6 +2589,10 @@ tribal_invasion = {
 	
 	ai_will_do = { 
 		factor = 1
+		
+		modifier = {
+			factor = 0.9 # Prefer using CB's without on_add costs
+		}
 		
 		# Try to guide the Hordes in the right direction
 		modifier = {
@@ -2680,6 +2785,7 @@ crusade = {
 					title = PREV
 					enemy = FROM
 					is_crusade = yes # Even if the title holder is not participating in the war, gain holdings occupied by all Crusade participants
+					type = holy_war
 				}
 			}
 		}
@@ -2712,12 +2818,13 @@ crusade = {
 							}
 						}
 					}
-					usurp_title = PREV
+					usurp_title = { target = PREV type = holy_war }
 				}
 				gain_settlements_under_title = {
 					title = PREV
 					enemy = FROM
 					is_crusade = yes # Even if the title holder is not participating in the war, gain holdings occupied by all Crusade participants
+					type = holy_war
 				}
 			}
 		}
@@ -2744,6 +2851,7 @@ crusade = {
 				gain_settlements_under_title = {
 					title = PREV
 					enemy = FROM
+					type = holy_war
 				}
 				if  = {
 					limit = {
@@ -2757,13 +2865,42 @@ crusade = {
 							}
 						}
 					}
-					usurp_title = PREV
+					usurp_title = { target = PREV type = holy_war }
 					
 					if = {
 						limit = {
 							NOT = { culture = PREV }
 						}
 						hidden_tooltip = { PREV = { conquest_culture = THIS } }
+					}
+				}
+				hidden_tooltip = {
+					if = {
+						limit = {
+							has_nickname = no
+						}
+						random_list = {
+							10 = {
+								modifier = {
+									factor = 0
+									NOT = { religion_group = christian }
+								}
+								give_nickname = nick_the_crusader
+							}
+							10 = { give_nickname = nick_the_holy }
+							10 = { give_nickname = nick_the_glorious }
+							10 = { give_nickname = nick_the_lionheart }
+							10 = { give_nickname = nick_the_great }
+							10 = { give_nickname = nick_the_hammer }
+							10 = { give_nickname = nick_the_pilgrim }
+							40 = {
+								modifier = {
+									factor = 0
+									religion_group = christian
+								}
+								give_nickname = nick_the_sword_of_god
+							}
+						}
 					}
 				}
 			}
@@ -2859,6 +2996,28 @@ crusade = {
 				}
 				hidden_tooltip = { character_event = { id = LoR.30 days = 12 } }
 			}
+			
+			hidden_tooltip = {
+				if = {
+					limit = {
+						has_nickname = no
+					}
+					random_list = {
+						10 = { give_nickname = nick_the_holy }
+						10 = { give_nickname = nick_the_glorious }
+						10 = { give_nickname = nick_the_lionheart }
+						10 = { give_nickname = nick_the_great }
+						10 = { give_nickname = nick_the_hammer }
+						20 = {
+							modifier = {
+								factor = 0
+								religion_group = christian
+							}
+							give_nickname = nick_the_sword_of_god
+						}
+					}
+				}
+			}
 		}
 	}
 
@@ -2899,6 +3058,27 @@ crusade = {
 					religion_group = christian
 				}
 				hidden_tooltip = { character_event = { id = LoR.30 days = 12 } }
+			}
+			hidden_tooltip = {
+				if = {
+					limit = {
+						has_nickname = no
+					}
+					random_list = {
+						10 = { give_nickname = nick_the_holy }
+						10 = { give_nickname = nick_the_glorious }
+						10 = { give_nickname = nick_the_lionheart }
+						10 = { give_nickname = nick_the_great }
+						10 = { give_nickname = nick_the_hammer }
+						20 = {
+							modifier = {
+								factor = 0
+								religion_group = christian
+							}
+							give_nickname = nick_the_sword_of_god
+						}
+					}
+				}
 			}
 		}
 		any_defender = {
@@ -3119,6 +3299,7 @@ religious = {
 						enemy = FROM
 						same_religion = yes # Only vassalize rulers of my religion
 						is_religious = yes
+						type = holy_war
 					}
 	#				gain_settlements_under_title = {
 	#					title = PREV
@@ -5105,7 +5286,7 @@ decadence_invasion = {
 			prestige = 200
 			piety = 100
 			occupy_minors_of_occupied_settlements = FROM
-			gain_all_occupied_titles = FROM
+			gain_all_occupied_titles = { who = FROM type = revolt }
 			give_nickname = nick_the_conqueror
 		}
 		any_attacker = {
@@ -5129,7 +5310,7 @@ decadence_invasion = {
 						limit = {
 							tier = PREVPREV
 						}
-						usurp_title_plus_barony_if_unlanded = ROOT
+						usurp_title_plus_barony_if_unlanded = { target = ROOT type = revolt }
 						
 						if = {
 							limit = {
@@ -5144,6 +5325,19 @@ decadence_invasion = {
 			
 			set_defacto_liege = ROOT
 			imprison = ROOT
+			
+			hidden_tooltip = {
+				if = {
+					limit = {
+						has_nickname = no
+					}
+					random_list = {
+						10 = { give_nickname = nick_the_decadent }
+						10 = { give_nickname = nick_the_unready }
+						10 = { give_nickname = nick_the_ill_ruler }
+					}
+				}
+			}
 		}
 		
 		hidden_tooltip = {
@@ -5376,6 +5570,21 @@ muslim_invasion = {
 						title = PREV
 						enemy = FROM
 						is_crusade = yes # Even if the title holder is not participating in the war, gain holdings occupied by all Crusade participants
+						type = invasion
+					}
+					
+					if = {
+						limit = {
+							has_nickname = no
+						}
+						random_list = {
+							10 = { give_nickname = nick_the_holy }
+							10 = { give_nickname = nick_the_glorious }
+							10 = { give_nickname = nick_the_lionheart }
+							10 = { give_nickname = nick_the_great }
+							10 = { give_nickname = nick_the_hammer }
+							10 = { give_nickname = nick_the_magnificent }
+						}
 					}
 				}
 			}
@@ -5397,6 +5606,21 @@ muslim_invasion = {
 					religion_group = christian
 				}
 				hidden_tooltip = { character_event = { id = LoR.30 days = 12 } }
+			}
+			
+			if = {
+				limit = {
+					has_nickname = no
+				}
+				random_list = {
+					10 = { give_nickname = nick_the_holy }
+					10 = { give_nickname = nick_the_glorious }
+					10 = { give_nickname = nick_the_lionheart }
+					10 = { give_nickname = nick_the_great }
+					10 = { give_nickname = nick_the_hammer }
+					10 = { give_nickname = nick_the_magnificent }
+					10 = { give_nickname = nick_the_avenger }
+				}
 			}
 		}
 		any_defender = {
@@ -5436,6 +5660,20 @@ muslim_invasion = {
 				}
 				hidden_tooltip = { character_event = { id = LoR.30 days = 12 } }
 			}
+			if = {
+				limit = {
+					has_nickname = no
+				}
+				random_list = {
+					10 = { give_nickname = nick_the_holy }
+					10 = { give_nickname = nick_the_glorious }
+					10 = { give_nickname = nick_the_lionheart }
+					10 = { give_nickname = nick_the_great }
+					10 = { give_nickname = nick_the_hammer }
+					10 = { give_nickname = nick_the_magnificent }
+					10 = { give_nickname = nick_the_avenger }
+				}
+			}
 		}
 		any_defender = {
 			limit = { character = FROM }
@@ -5461,6 +5699,14 @@ muslim_invasion = {
 	
 	defender_ai_defeat_worth = {
 		factor = 150
+	}
+	
+	ai_will_do = { 
+		factor = 1
+		
+		modifier = {
+			factor = 0.9 # Prefer using CB's without on_add costs
+		}
 	}
 }
 
@@ -5785,6 +6031,7 @@ imperial_reconquest = {
 					vassalize_or_take_under_title = {
 						title = PREV
 						enemy = FROM
+						type = invasion
 					}
 				}
 			}
@@ -5793,7 +6040,7 @@ imperial_reconquest = {
 			limit = {
 				holder_scope = { character = FROM }
 			}
-			usurp_title_only = ROOT
+			usurp_title_only = { target = ROOT type = invasion }
 		}
 	}
 
@@ -6232,7 +6479,26 @@ viking_invasion = {
 			religion_authority = {
 				modifier = won_viking_invasion
 			}
+			
+			hidden_tooltip = {
+				if = {
+					limit = {
+						has_nickname = no
+					}
+					random_list = {
+						10 = { give_nickname = nick_the_great }
+						10 = { give_nickname = nick_the_victorious }
+						10 = { give_nickname = nick_the_fearless }
+						10 = { give_nickname = nick_the_brave }
+						10 = { give_nickname = nick_haardraade }
+						10 = { give_nickname = nick_the_viking }
+						10 = { give_nickname = nick_the_dragon }
+						10 = { give_nickname = nick_the_ironside }
+					}
+				}
+			}
 		}
+		
 		any_attacker = {
 			limit = { character = ROOT }
 			participation_scaled_prestige = 300
@@ -6265,10 +6531,11 @@ viking_invasion = {
 				}
 				ROOT = {
 					occupy_minors_of_occupied_settlements = FROM
-					gain_all_occupied_titles = FROM
+					gain_all_occupied_titles = { who = FROM type = invasion }
 					vassalize_or_take_under_title_destroy_duchies = {
 						title = PREV
 						enemy = FROM
+						type = invasion
 					}
 					
 					# Settle the special invasion forces
@@ -6821,7 +7088,7 @@ heretic_revolt = {
 			prestige = 200
 			piety = 100
 			occupy_minors_of_occupied_settlements = FROM
-			gain_all_occupied_titles = FROM
+			gain_all_occupied_titles = { who = FROM type = revolt }
 			clr_character_flag = heretic_revolter
 		}
 		
@@ -6935,7 +7202,7 @@ religious_revolt = {
 			prestige = 200
 			piety = 100
 			occupy_minors_of_occupied_settlements = FROM
-			gain_all_occupied_titles = FROM
+			gain_all_occupied_titles = { who = FROM type = revolt }
 			clr_character_flag = religious_revolter
 		}
 		
@@ -7060,7 +7327,7 @@ liberation_revolt = {
 		ROOT = {
 			prestige = 1000
 			occupy_minors_of_occupied_settlements = FROM
-			gain_all_occupied_titles = FROM
+			gain_all_occupied_titles = { who = FROM type = revolt }
 			clr_character_flag = nationalist_rebel
 			give_nickname = nick_the_liberator
 		}
@@ -7078,6 +7345,7 @@ liberation_revolt = {
 						title = PREV
 						enemy = FROM
 						is_revolt = yes
+						type = revolt
 					}
 					if = {
 						limit = {
@@ -7205,6 +7473,7 @@ duchy_adventure = {
 					vassalize_or_take_under_title = {
 						title = PREV
 						enemy = FROM
+						type = host
 					}
 				}
 			}
@@ -7455,7 +7724,23 @@ pagan_holy_war = {
 				modifier = won_holy_war
 				years = 20
 			}
+			
+			hidden_tooltip = {
+				if = {
+					limit = {
+						has_nickname = no
+					}
+					random_list = {
+						10 = { give_nickname = nick_the_dragon }
+						10 = { give_nickname = nick_the_holy }
+						10 = { give_nickname = nick_bloodaxe }
+						10 = { give_nickname = nick_the_great }
+						40 = { give_nickname = nick_the_sword_of_god }
+					}
+				}
+			}
 		}
+		
 		FROM = { 
 			religion_authority = {
 				modifier = lost_holy_war
@@ -7476,6 +7761,7 @@ pagan_holy_war = {
 						enemy = FROM
 						same_religion = yes # Only vassalize rulers of my religion
 						is_religious = yes
+						type = holy_war
 					}
 				}
 			}
@@ -7538,6 +7824,10 @@ pagan_holy_war = {
 	
 	ai_will_do = { 
 		factor = 1
+		
+		modifier = {
+			factor = 0.9 # Prefer using CB's without on_add costs
+		}
 		
 		modifier = {
 			factor = 0.1
@@ -7722,6 +8012,14 @@ caliphal_subjugation = {
 	defender_ai_defeat_worth = {
 		factor = 100
 	}
+	
+	ai_will_do = { 
+		factor = 1
+		
+		modifier = {
+			factor = 0.9 # Prefer using CB's without on_add costs
+		}
+	}
 }
 
 muslim_county_conquest = { 
@@ -7901,6 +8199,14 @@ muslim_county_conquest = {
 	
 	defender_ai_defeat_worth = {
 		factor = 100
+	}
+	
+	ai_will_do = { 
+		factor = 1
+		
+		modifier = {
+			factor = 0.9 # Prefer using CB's without on_add costs
+		}
 	}
 }
 
@@ -8836,11 +9142,12 @@ shia_caliphate_rising = {
 				}
 				ROOT = {
 					occupy_minors_of_occupied_settlements = FROM
-					gain_all_occupied_titles = FROM
+					gain_all_occupied_titles = { who = FROM type = revolt }
 					vassalize_or_take_under_title = {
 						title = PREV
 						enemy = FROM
 						is_religious = yes
+						type = revolt
 					}
 					
 					any_demesne_title = {
@@ -8848,7 +9155,7 @@ shia_caliphate_rising = {
 						remove_holding_modifier = recently_conquered
 						refill_holding_levy = yes
 					}
-					usurp_title = { target = PREV type = holy_war }
+					usurp_title = { target = PREV type = revolt }
 				}
 				
 				if = {
@@ -9091,11 +9398,11 @@ cb_install_antiking = {
 	}
 	
 	is_valid = {
-		NOT = { 
-			holder_scope = { 
-				character = ROOT 
-			} 
-		}	
+		NOT = {
+			holder_scope = {
+				character = ROOT
+			}
+		}
 	
 		ROOT = {
 			religion = FROM
@@ -9636,6 +9943,14 @@ indian_subjugation = {
 	defender_ai_defeat_worth = {
 		factor = 100
 	}
+	
+	ai_will_do = { 
+		factor = 1
+		
+		modifier = {
+			factor = 0.9 # Prefer using CB's without on_add costs
+		}
+	}
 }
 
 # This can be used for various special cases; the great conquerors
@@ -9723,6 +10038,20 @@ manifest_destiny_invasion = {
 	on_success = {
 		ROOT = {
 			prestige = 200
+			
+			hidden_tooltip = {
+				if = {
+					limit = {
+						has_nickname = no
+					}
+					random_list = {
+						10 = { give_nickname = nick_the_great }
+						10 = { give_nickname = nick_the_magnificent }
+						10 = { give_nickname = nick_the_glorious }
+						10 = { give_nickname = nick_the_conqueror }
+					}
+				}
+			}
 		}
 		
 		any_attacker = {
@@ -9764,6 +10093,7 @@ manifest_destiny_invasion = {
 						title = PREV
 						enemy = FROM
 						is_crusade = yes # Even if the kingdom title holder is not participating in the war, gain holdings occupied by all participants
+						type = invasion
 					}
 				}
 			}
